@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html id='stuff'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title id='taitl'>A very harmless website</title>
+  </head>
+	<body id='baudy'>
+    <button onclick='goto(1)'>click me!</button>
+    <button onclick='goto(10)'>no, click me!</button>
+    <button onclick='goto(13)'>don't click me!</button>
+    <button onclick='goto("heckercaught")'>dieee</button>
+    <button onclick='goto("gasLeak")'>no u</button>
+    <button onclick='goto("submitHWAssignment")'>bruh</button>
+    <button onclick='goto("importLevel3")'>oof</button>
+    <button onclick='goto3("winbaja")'>lol</button>
+    <button onclick='goto3("repair")'>hehe</button>
+    <a href='boring.html'>boring!</a><br>
+    
+		<noscript>You need JavaScript to play this game ya BIG NUB</noscript>
+    <script src='script.js'></script>
+    <script src='level3.js'></script>
+        <script src='https://harmlesswebsite.idkwutocalmself.repl.co/library.js'></script>
+  </body>
+</html>

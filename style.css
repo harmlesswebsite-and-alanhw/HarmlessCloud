@@ -1,0 +1,46 @@
+body, button, input, select, textarea {
+    font-family: var(--base-font);
+}
+pre, code {
+    font-family: var(--code-font);
+}
+header {
+    display: table;
+    position: var(--header-position);
+    border-color: var(--header-border-color);
+    border-width: var(--header-border-width);
+    border-style: var(--header-border-style);
+    width: 100%;
+}
+#header-inner {
+    width: 100%;
+    display: table-row;
+}
+#header-inner > * {
+    display: table-cell;
+    padding: var(--header-item-padding);
+}
+.header-link {
+    font-weight: var(--header-link-bold);
+    font-size: var(--header-link-size);
+}
+.hidden2eyes {
+    position: fixed;
+    left: -1000px;
+    top: -1000px;
+}
+.topsearch {
+    width: 100%;
+}
+input, select, textarea {
+    padding: var(--input-field-padding);
+}
+.toolbar-selected {
+    background-color: var(--toolbar-selected-bg) !important;
+    color: var(--toolbar-selected-color, inherit) !important;
+}
+.toolbar-button {
+    border: none;
+    background-color: var(--toolbar-notselected-bg, transparent);
+    color: var(--actual-toolbar-selected-color, inherit);
+}

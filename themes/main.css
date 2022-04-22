@@ -1,0 +1,64 @@
+:root {
+    --base-font: system-ui;
+    --code-font: monospace;
+    --header-position: sticky;
+    --header-border-color:#cccccc;
+    --header-border-width: 1px;
+    --header-border-style: solid;
+    --header-link-bold: 700;
+    --header-link-size: 1.1em;
+    --input-field-padding: 7px;
+    --header-item-padding: 3px;
+    --toolbar-selected-bg: #cccccc;
+    --toolbar-notselected-bg: white;
+    --dialog-bg: white;
+}
+summary {
+    cursor: pointer;
+}
+summary.button {
+    list-style: none;
+    display: inline-block;
+    background-color: #0033cc;
+    color: white;
+    padding: 7px;
+    margin: 1px;
+}
+.banner {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    text-align: center;
+    padding: 7px;
+    display: inline-block;
+    background-color: blue;
+    color: white;
+    animation-iteration-count: 1;
+    animation-name: fadeout;
+    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;  
+}
+@keyframes fadeout {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+        z-index: -8888;
+    }
+}
+img {
+    max-width: 100%;
+}
+tr[id^="explorer-item-"]:target {
+    background-color: var(--selected-explorer-bg, gold);
+}
+.dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--dialog-bg);
+    border: 1px solid;
+}

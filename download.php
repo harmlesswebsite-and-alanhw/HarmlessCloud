@@ -1,0 +1,20 @@
+<?php
+$GLOBALS['nofooter'] = true;
+session_start();
+if (!isset($_GET['path'])) die("You need to specify a path.");
+ob_start();
+require 'harmlesslib.php';
+$path = $_GET['path'] ?? "/";
+$path = explode("/", $path);
+foreach ($path as &$item) $item = cleanFilename($item);
+$path = "/" . implode("/", array_filter($path, function($v) { return $v !== "" && $v !== ".."; }));
+$currentpath = $path;
+$name = $_SESSION['login'];
+$fileExists = file_exists("files/$name$currentpath.file");
+ob_end_clean();
+if (!$fileExists) die("Bad filename.");
+rename("files/$name$currentpath.file", "files/$name$currentpath");
+header('Content-Type: ' . mime_content_type("files/$name$currentpath"));
+readfile("files/$name$currentpath");
+rename("files/$name$currentpath", "files/$name$currentpath.file");
+ob_start();

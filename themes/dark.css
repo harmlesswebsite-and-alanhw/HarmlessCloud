@@ -1,0 +1,29 @@
+@import url(main.css);
+:root {
+    --base-font: system-ui;
+    --code-font: monospace;
+    --header-position: sticky;
+    --header-border-color:#222222;
+    --header-border-width: 1px;
+    --header-border-style: solid;
+    --header-link-bold: 700;
+    --header-link-size: 1.1em;
+    --input-field-padding: 7px;
+    --header-item-padding: 3px;
+    --toolbar-selected-bg: #222222;
+    --toolbar-notselected-bg: white;
+    --dialog-bg: #333333;
+    --selected-explorer-bg: #ac5600;
+    --actual-toolbar-selected-color: black;
+    --toolbar-selected-color: white;
+}
+body {
+    background-color: black;
+    color: white;
+}
+a:visited {
+    color: skyblue;
+}
+a:not(:visited) {
+    color: #87cefa;
+}
